@@ -19,13 +19,8 @@ jobs:
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
-    - name: Release prepare with Maven
-      run: mvn -B release:prepare --file pom.xml
-      
-    - name: Release perform Maven
-      run: mvn -B release:perform --file pom.xml
-
-    - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
+    - name: Maven release      
+      uses: qcastel/github-actions-maven-release@v1.0.3
+      with:                
+        # Github access token. https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
+        access-token: ${{ github.token }}
