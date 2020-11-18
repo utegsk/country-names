@@ -23,4 +23,4 @@ jobs:
       uses: qcastel/github-actions-maven-release@v1.0.3
       with:                
         # Github access token. https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
-        access-token: ${{ github.token }}
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
