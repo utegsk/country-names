@@ -11,12 +11,12 @@
     <name>country-names</name>    
     <url>https://uteg.sk</url>
 
-    <scm>
+    <!-- <scm>
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
         <url>git@github.com:utegsk/country-names.git</url>
         <tag>HEAD</tag>
-    </scm>
+    </scm> -->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,9 +26,9 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
+            <id>country-names</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/utegsk</url>
+            <url>https://maven.pkg.github.com/utegsk/country-names</url>
         </repository>
     </distributionManagement>
 
@@ -88,7 +88,7 @@
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
-                <plugin>
+                <!-- <plugin>
                     <artifactId>maven-release-plugin</artifactId>
                     <version>2.5.3</version>
                     <configuration>
@@ -96,7 +96,7 @@
                         <goals>install</goals>
                         <arguments>-DskipTests</arguments>
                     </configuration>
-                </plugin>
+                </plugin> -->
             </plugins>
         </pluginManagement>
     </build>
